@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PowerHouse Gym</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  </head>
+  <body
+    class="m-0 flex min-h-screen flex-col bg-[radial-gradient(circle_at_top_left,_#fff8ea_0%,_#f4f2ec_48%)] text-[#23201a]"
+  >
+    <nav
+      class="flex items-center justify-between gap-3 bg-[#1f1b16] px-6 py-4 text-white max-[980px]:flex-col"
+    >
+      <div class="text-xl font-bold tracking-wide">PowerHouse Gym</div>
+      <ul class="flex list-none flex-wrap items-center justify-center gap-4 p-0">
+        <li><a class="font-medium hover:text-[#ffd7c2]" href="#inicio">Inicio</a></li>
+        <li><a class="font-medium hover:text-[#ffd7c2]" href="#planes">Planes</a></li>
+        <li><a class="font-medium hover:text-[#ffd7c2]" href="#horarios">Horarios</a></li>
+        <li><a class="font-medium hover:text-[#ffd7c2]" href="#contacto">Contacto</a></li>
+      </ul>
+    </nav>
+
+    <main
+      id="inicio"
+      class="grid flex-1 place-items-center gap-6 px-5 py-8"
+    >
+      <section
+        class="w-full max-w-[680px] rounded-[18px] border border-[#e8dfd2] bg-[#fffdf7] p-8 text-center shadow-[0_14px_28px_rgba(0,0,0,0.08)] max-[980px]:p-6"
+        aria-label="Carta de bienvenida"
+      >
+        <h1 class="mb-3 text-3xl font-bold max-[560px]:text-2xl">Bienvenido a tu nuevo nivel</h1>
+        <p class="mx-auto mb-6 max-w-[56ch] leading-relaxed">
+          En PowerHouse Gym entrenas con energía, constancia y acompañamiento
+          profesional. Empieza hoy y transforma tu cuerpo con rutinas pensadas
+          para tus objetivos.
+        </p>
+        <a
+          class="inline-block rounded-lg bg-[#d9480f] px-5 py-3 font-bold text-white hover:bg-[#9f3410]"
+          href="#planes"
+          >Ver planes</a
+        >
+      </section>
+
+      <section
+        class="grid w-full max-w-[1180px] grid-cols-4 gap-4 max-[980px]:grid-cols-2 max-[560px]:grid-cols-1"
+        aria-label="Resumen del gimnasio"
+      >
+        <article class="rounded-2xl border border-[#e8dfd2] bg-[#fffdf7] p-4 shadow-[0_8px_18px_rgba(0,0,0,0.06)]">
+          <h2 class="mb-2 text-lg font-semibold">Socios activos</h2>
+          <p class="leading-relaxed">Más de 450 socios entrenan cada semana con nosotros.</p>
+        </article>
+        <article class="rounded-2xl border border-[#e8dfd2] bg-[#fffdf7] p-4 shadow-[0_8px_18px_rgba(0,0,0,0.06)]">
+          <h2 class="mb-2 text-lg font-semibold">Clases disponibles</h2>
+          <p class="leading-relaxed">12 clases: funcional, spinning, box, yoga, pilates y más.</p>
+        </article>
+        <article class="rounded-2xl border border-[#e8dfd2] bg-[#fffdf7] p-4 shadow-[0_8px_18px_rgba(0,0,0,0.06)]" id="horarios">
+          <h2 class="mb-2 text-lg font-semibold">Horarios de clase</h2>
+          <p class="leading-relaxed">Lunes a sábado, de 6:00 a 22:00 con turnos cada hora.</p>
+        </article>
+        <article class="rounded-2xl border border-[#e8dfd2] bg-[#fffdf7] p-4 shadow-[0_8px_18px_rgba(0,0,0,0.06)]">
+          <h2 class="mb-2 text-lg font-semibold">Entrenadores</h2>
+          <p class="leading-relaxed">8 entrenadores certificados para guiar cada objetivo.</p>
+        </article>
+      </section>
+    </main>
+
+    <footer id="contacto" class="bg-[#1f1b16] p-4 text-center text-[0.95rem] text-[#f5eee4]">
+      <p class="m-1">PowerHouse Gym | Calle Fuerte 123 | +34 600 123 456</p>
+      <p class="m-1">&copy; 2026 PowerHouse Gym. Todos los derechos reservados.</p>
+    </footer>
+  </body>
+</html>
