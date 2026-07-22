@@ -1,73 +1,370 @@
 <!doctype html>
 <html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>PowerHouse Gym</title>
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-  </head>
-  <body
-    class="m-0 flex min-h-screen flex-col bg-[radial-gradient(circle_at_top_left,_#fff8ea_0%,_#f4f2ec_48%)] text-[#23201a]"
-  >
-    <nav
-      class="flex items-center justify-between gap-3 bg-[#1f1b16] px-6 py-4 text-white max-[980px]:flex-col"
-    >
-      <div class="text-xl font-bold tracking-wide">PowerHouse Gym</div>
-      <ul class="flex list-none flex-wrap items-center justify-center gap-4 p-0">
-        <li><a class="font-medium hover:text-[#ffd7c2]" href="#inicio">Inicio</a></li>
-        <li><a class="font-medium hover:text-[#ffd7c2]" href="#planes">Planes</a></li>
-        <li><a class="font-medium hover:text-[#ffd7c2]" href="#horarios">Horarios</a></li>
-        <li><a class="font-medium hover:text-[#ffd7c2]" href="#contacto">Contacto</a></li>
-      </ul>
-    </nav>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Dashboard responsive con KPIs de rendimiento comercial y marketing.">
+	<meta name="author" content="4GeeksAcademy">
+	<meta name="theme-color" content="#f8fafc">
+	<title>Dashboard de KPIs</title>
+	<script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+<body class="min-h-screen bg-slate-100 text-slate-900">
+	<header class="border-b border-slate-200 bg-white/90 backdrop-blur">
+		<div class="mx-auto flex max-w-7xl items-center justify-between px-4 py-4 sm:px-6 lg:px-8">
+			<div>
+				<p class="text-xs font-semibold uppercase tracking-[0.24em] text-emerald-600">Analytics Dashboard</p>
+				<h1 class="mt-1 text-2xl font-bold tracking-tight text-slate-950">Resumen de rendimiento</h1>
+			</div>
+			<nav aria-label="Principal">
+				<ul class="flex items-center gap-3 text-sm font-medium text-slate-600">
+					<li><a href="#kpis" class="rounded-full px-3 py-2 transition hover:bg-slate-100 hover:text-slate-950">KPIs</a></li>
+					<li><a href="#reportes" class="rounded-full px-3 py-2 transition hover:bg-slate-100 hover:text-slate-950">Reportes</a></li>
+					<li><a href="#campanas" class="rounded-full px-3 py-2 transition hover:bg-slate-100 hover:text-slate-950">Campañas</a></li>
+				</ul>
+			</nav>
+		</div>
+	</header>
 
-    <main
-      id="inicio"
-      class="grid flex-1 place-items-center gap-6 px-5 py-8"
-    >
-      <section
-        class="w-full max-w-[680px] rounded-[18px] border border-[#e8dfd2] bg-[#fffdf7] p-8 text-center shadow-[0_14px_28px_rgba(0,0,0,0.08)] max-[980px]:p-6"
-        aria-label="Carta de bienvenida"
-      >
-        <h1 class="mb-3 text-3xl font-bold max-[560px]:text-2xl">Bienvenido a tu nuevo nivel</h1>
-        <p class="mx-auto mb-6 max-w-[56ch] leading-relaxed">
-          En PowerHouse Gym entrenas con energía, constancia y acompañamiento
-          profesional. Empieza hoy y transforma tu cuerpo con rutinas pensadas
-          para tus objetivos.
-        </p>
-        <a
-          class="inline-block rounded-lg bg-[#d9480f] px-5 py-3 font-bold text-white hover:bg-[#9f3410]"
-          href="#planes"
-          >Ver planes</a
-        >
-      </section>
+	<main class="mx-auto flex max-w-7xl flex-col gap-8 px-4 py-8 sm:px-6 lg:px-8">
+		<section id="kpis" aria-labelledby="kpis-title" class="space-y-6">
+			<div class="flex flex-col gap-2 sm:flex-row sm:items-end sm:justify-between">
+				<div>
+					<p class="text-sm font-medium uppercase tracking-[0.2em] text-slate-500">Panel ejecutivo</p>
+					<h2 id="kpis-title" class="text-3xl font-semibold tracking-tight text-slate-950">KPIs principales</h2>
+				</div>
+				<p class="max-w-2xl text-sm text-slate-600">Monitorea ingresos por comisiones, ventas, engagement y retorno de inversión desde un solo bloque superior.</p>
+			</div>
 
-      <section
-        class="grid w-full max-w-[1180px] grid-cols-4 gap-4 max-[980px]:grid-cols-2 max-[560px]:grid-cols-1"
-        aria-label="Resumen del gimnasio"
-      >
-        <article class="rounded-2xl border border-[#e8dfd2] bg-[#fffdf7] p-4 shadow-[0_8px_18px_rgba(0,0,0,0.06)]">
-          <h2 class="mb-2 text-lg font-semibold">Socios activos</h2>
-          <p class="leading-relaxed">Más de 450 socios entrenan cada semana con nosotros.</p>
-        </article>
-        <article class="rounded-2xl border border-[#e8dfd2] bg-[#fffdf7] p-4 shadow-[0_8px_18px_rgba(0,0,0,0.06)]">
-          <h2 class="mb-2 text-lg font-semibold">Clases disponibles</h2>
-          <p class="leading-relaxed">12 clases: funcional, spinning, box, yoga, pilates y más.</p>
-        </article>
-        <article class="rounded-2xl border border-[#e8dfd2] bg-[#fffdf7] p-4 shadow-[0_8px_18px_rgba(0,0,0,0.06)]" id="horarios">
-          <h2 class="mb-2 text-lg font-semibold">Horarios de clase</h2>
-          <p class="leading-relaxed">Lunes a sábado, de 6:00 a 22:00 con turnos cada hora.</p>
-        </article>
-        <article class="rounded-2xl border border-[#e8dfd2] bg-[#fffdf7] p-4 shadow-[0_8px_18px_rgba(0,0,0,0.06)]">
-          <h2 class="mb-2 text-lg font-semibold">Entrenadores</h2>
-          <p class="leading-relaxed">8 entrenadores certificados para guiar cada objetivo.</p>
-        </article>
-      </section>
-    </main>
+			<div class="grid grid-cols-1 gap-4 sm:grid-cols-2 xl:grid-cols-4">
+				<article class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm shadow-slate-200/60">
+					<div class="flex items-start justify-between gap-4">
+						<div>
+							<p class="text-sm font-medium text-slate-500">Ingresos totales</p>
+							<h3 class="mt-3 text-3xl font-bold tracking-tight text-slate-950">$18,450</h3>
+						</div>
+						<span class="rounded-full bg-emerald-100 px-3 py-1 text-xs font-semibold text-emerald-700">15% comisiones</span>
+					</div>
+					<p class="mt-4 text-sm text-slate-600">Generados a partir de las comisiones sobre el total facturado este mes.</p>
+				</article>
 
-    <footer id="contacto" class="bg-[#1f1b16] p-4 text-center text-[0.95rem] text-[#f5eee4]">
-      <p class="m-1">PowerHouse Gym | Calle Fuerte 123 | +34 600 123 456</p>
-      <p class="m-1">&copy; 2026 PowerHouse Gym. Todos los derechos reservados.</p>
-    </footer>
-  </body>
+				<article class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm shadow-slate-200/60">
+					<div class="flex items-start justify-between gap-4">
+						<div>
+							<p class="text-sm font-medium text-slate-500">Volumen de ventas</p>
+							<h3 class="mt-3 text-3xl font-bold tracking-tight text-slate-950">$123,000</h3>
+						</div>
+						<span class="rounded-full bg-sky-100 px-3 py-1 text-xs font-semibold text-sky-700">+12.4%</span>
+					</div>
+					<p class="mt-4 text-sm text-slate-600">Valor bruto acumulado en ventas confirmadas durante el periodo actual.</p>
+				</article>
+
+				<article class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm shadow-slate-200/60">
+					<div class="flex items-start justify-between gap-4">
+						<div>
+							<p class="text-sm font-medium text-slate-500">Engagement rate promedio</p>
+							<h3 class="mt-3 text-3xl font-bold tracking-tight text-slate-950">6.8%</h3>
+						</div>
+						<span class="rounded-full bg-amber-100 px-3 py-1 text-xs font-semibold text-amber-700">Últimos 30 días</span>
+					</div>
+					<p class="mt-4 text-sm text-slate-600">Media consolidada de interacción entre audiencias, campañas y contenido activo.</p>
+				</article>
+
+				<article class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm shadow-slate-200/60">
+					<div class="flex items-start justify-between gap-4">
+						<div>
+							<p class="text-sm font-medium text-slate-500">ROI</p>
+							<h3 class="mt-3 text-3xl font-bold tracking-tight text-slate-950">248%</h3>
+						</div>
+						<span class="rounded-full bg-violet-100 px-3 py-1 text-xs font-semibold text-violet-700">Rentabilidad</span>
+					</div>
+					<p class="mt-4 text-sm text-slate-600">Retorno de inversión estimado según gasto publicitario e ingresos atribuibles.</p>
+				</article>
+			</div>
+		</section>
+
+		<section id="reportes" aria-labelledby="reportes-title" class="space-y-6">
+			<div class="flex flex-col gap-2 sm:flex-row sm:items-end sm:justify-between">
+				<div>
+					<p class="text-sm font-medium uppercase tracking-[0.2em] text-slate-500">Análisis intermedio</p>
+					<h2 id="reportes-title" class="text-3xl font-semibold tracking-tight text-slate-950">Rendimiento por canal y producto</h2>
+				</div>
+				<p class="max-w-2xl text-sm text-slate-600">Este bloque central resume qué oferta convierte mejor, qué plataforma impulsa más alcance y cómo evoluciona el funnel comercial.</p>
+			</div>
+
+			<div class="grid grid-cols-1 gap-4 xl:grid-cols-12">
+				<article class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm shadow-slate-200/60 xl:col-span-5">
+					<div class="flex flex-col gap-2 sm:flex-row sm:items-start sm:justify-between">
+						<div>
+							<p class="text-sm font-medium text-slate-500">Productos</p>
+							<h3 class="mt-1 text-2xl font-semibold tracking-tight text-slate-950">Conversión por producto</h3>
+						</div>
+						<span class="rounded-full bg-emerald-100 px-3 py-1 text-xs font-semibold text-emerald-700">Mejor conversión: Producto B</span>
+					</div>
+
+					<div class="mt-6 space-y-4">
+						<div class="rounded-2xl bg-slate-50 p-4">
+							<div class="flex items-center justify-between gap-4">
+								<div>
+									<p class="text-sm font-medium text-slate-500">Producto A</p>
+									<p class="mt-2 text-2xl font-bold tracking-tight text-slate-950">50€</p>
+								</div>
+								<span class="rounded-full bg-slate-200 px-3 py-1 text-xs font-semibold text-slate-700">Conversión 3.9%</span>
+							</div>
+							<div class="mt-4 h-2 rounded-full bg-slate-200">
+								<div class="h-2 w-[39%] rounded-full bg-slate-500"></div>
+							</div>
+						</div>
+
+						<div class="rounded-2xl bg-emerald-50 p-4 ring-1 ring-emerald-100">
+							<div class="flex items-center justify-between gap-4">
+								<div>
+									<p class="text-sm font-medium text-emerald-700">Producto B</p>
+									<p class="mt-2 text-2xl font-bold tracking-tight text-slate-950">120€</p>
+								</div>
+								<span class="rounded-full bg-emerald-200 px-3 py-1 text-xs font-semibold text-emerald-800">Conversión 7.2%</span>
+							</div>
+							<div class="mt-4 h-2 rounded-full bg-emerald-100">
+								<div class="h-2 w-[72%] rounded-full bg-emerald-500"></div>
+							</div>
+						</div>
+
+						<div class="rounded-2xl bg-slate-50 p-4">
+							<div class="flex items-center justify-between gap-4">
+								<div>
+									<p class="text-sm font-medium text-slate-500">Producto C</p>
+									<p class="mt-2 text-2xl font-bold tracking-tight text-slate-950">80€</p>
+								</div>
+								<span class="rounded-full bg-slate-200 px-3 py-1 text-xs font-semibold text-slate-700">Conversión 5.1%</span>
+							</div>
+							<div class="mt-4 h-2 rounded-full bg-slate-200">
+								<div class="h-2 w-[51%] rounded-full bg-sky-500"></div>
+							</div>
+						</div>
+					</div>
+				</article>
+
+				<article class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm shadow-slate-200/60 xl:col-span-4">
+					<div class="flex flex-col gap-2 sm:flex-row sm:items-start sm:justify-between">
+						<div>
+							<p class="text-sm font-medium text-slate-500">Plataformas</p>
+							<h3 class="mt-1 text-2xl font-semibold tracking-tight text-slate-950">Conversión y alcance</h3>
+						</div>
+						<span class="rounded-full bg-sky-100 px-3 py-1 text-xs font-semibold text-sky-700">Mix social</span>
+					</div>
+
+					<div class="mt-6 space-y-4">
+						<div class="rounded-2xl bg-slate-50 p-4">
+							<div class="flex items-center justify-between">
+								<p class="text-sm font-semibold text-slate-800">Instagram</p>
+								<p class="text-sm text-slate-500">Alcance 82K</p>
+							</div>
+							<p class="mt-3 text-2xl font-bold tracking-tight text-slate-950">4.8%</p>
+							<p class="mt-1 text-sm text-slate-600">Conversión estable con alta calidad de tráfico.</p>
+						</div>
+
+						<div class="rounded-2xl bg-slate-50 p-4">
+							<div class="flex items-center justify-between">
+								<p class="text-sm font-semibold text-slate-800">TikTok</p>
+								<p class="text-sm text-slate-500">Alcance 131K</p>
+							</div>
+							<p class="mt-3 text-2xl font-bold tracking-tight text-slate-950">6.2%</p>
+							<p class="mt-1 text-sm text-slate-600">Mejor equilibrio entre visibilidad masiva y respuesta directa.</p>
+						</div>
+
+						<div class="rounded-2xl bg-slate-50 p-4">
+							<div class="flex items-center justify-between">
+								<p class="text-sm font-semibold text-slate-800">YouTube</p>
+								<p class="text-sm text-slate-500">Alcance 64K</p>
+							</div>
+							<p class="mt-3 text-2xl font-bold tracking-tight text-slate-950">3.6%</p>
+							<p class="mt-1 text-sm text-slate-600">Alcance menor, pero con sesiones más largas por usuario.</p>
+						</div>
+					</div>
+				</article>
+
+				<article class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm shadow-slate-200/60 xl:col-span-3">
+					<div class="flex flex-col gap-2">
+						<p class="text-sm font-medium text-slate-500">Funnel</p>
+						<h3 class="text-2xl font-semibold tracking-tight text-slate-950">Embudo de ventas</h3>
+						<p class="text-sm text-slate-600">Conversión visual por etapas desde la captación hasta el cierre.</p>
+					</div>
+
+					<div class="mt-6 space-y-3">
+						<div class="rounded-2xl bg-slate-950 px-4 py-4 text-white">
+							<div class="flex items-center justify-between gap-4">
+								<p class="text-sm font-semibold">Visitas</p>
+								<p class="text-sm text-slate-300">24,000</p>
+							</div>
+							<div class="mt-3 h-2 rounded-full bg-white/15">
+								<div class="h-2 w-full rounded-full bg-emerald-400"></div>
+							</div>
+						</div>
+
+						<div class="mx-auto w-11/12 rounded-2xl bg-slate-800 px-4 py-4 text-white">
+							<div class="flex items-center justify-between gap-4">
+								<p class="text-sm font-semibold">Leads</p>
+								<p class="text-sm text-slate-300">9,400 · 39%</p>
+							</div>
+							<div class="mt-3 h-2 rounded-full bg-white/15">
+								<div class="h-2 w-[39%] rounded-full bg-sky-400"></div>
+							</div>
+						</div>
+
+						<div class="mx-auto w-10/12 rounded-2xl bg-slate-700 px-4 py-4 text-white">
+							<div class="flex items-center justify-between gap-4">
+								<p class="text-sm font-semibold">Oportunidades</p>
+								<p class="text-sm text-slate-300">4,100 · 17%</p>
+							</div>
+							<div class="mt-3 h-2 rounded-full bg-white/15">
+								<div class="h-2 w-[17%] rounded-full bg-amber-400"></div>
+							</div>
+						</div>
+
+						<div class="mx-auto w-9/12 rounded-2xl bg-slate-600 px-4 py-4 text-white">
+							<div class="flex items-center justify-between gap-4">
+								<p class="text-sm font-semibold">Ventas</p>
+								<p class="text-sm text-slate-200">1,150 · 4.8%</p>
+							</div>
+							<div class="mt-3 h-2 rounded-full bg-white/15">
+								<div class="h-2 w-[5%] rounded-full bg-violet-300"></div>
+							</div>
+						</div>
+					</div>
+				</article>
+			</div>
+		</section>
+
+		<section id="campanas" aria-labelledby="campanas-title" class="space-y-6">
+			<div class="flex flex-col gap-2 sm:flex-row sm:items-end sm:justify-between">
+				<div>
+					<p class="text-sm font-medium uppercase tracking-[0.2em] text-slate-500">Bloque operacional</p>
+					<h2 id="campanas-title" class="text-3xl font-semibold tracking-tight text-slate-950">Detalles operacionales y alertas</h2>
+				</div>
+			</div>
+
+			<div class="grid grid-cols-1 gap-4 xl:grid-cols-12">
+				<article class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm shadow-slate-200/60 xl:col-span-7">
+					<div class="flex flex-col gap-2 sm:flex-row sm:items-start sm:justify-between">
+						<div>
+							<p class="text-sm font-medium text-slate-500">Tabla de productos</p>
+							<h3 class="mt-1 text-2xl font-semibold tracking-tight text-slate-950">Desglose comercial por producto</h3>
+						</div>
+						<span class="rounded-full bg-emerald-100 px-3 py-1 text-xs font-semibold text-emerald-700">Detalles</span>
+					</div>
+
+					<div class="mt-6 overflow-x-auto rounded-2xl border border-slate-200">
+						<table class="min-w-full divide-y divide-slate-200 text-left text-sm">
+							<thead class="bg-slate-50 text-slate-600">
+								<tr>
+									<th scope="col" class="px-4 py-3 font-semibold whitespace-nowrap">Producto</th>
+									<th scope="col" class="px-4 py-3 font-semibold whitespace-nowrap">Precio</th>
+									<th scope="col" class="px-4 py-3 font-semibold whitespace-nowrap">Comisiones</th>
+									<th scope="col" class="px-4 py-3 font-semibold whitespace-nowrap">Conversiones</th>
+									<th scope="col" class="px-4 py-3 font-semibold whitespace-nowrap">ROI</th>
+								</tr>
+							</thead>
+							<tbody class="divide-y divide-slate-200 bg-white text-slate-700">
+								<tr>
+									<th scope="row" class="px-4 py-4 font-semibold whitespace-nowrap text-slate-900">Producto A</th>
+									<td class="px-4 py-4 whitespace-nowrap">50€</td>
+									<td class="px-4 py-4 whitespace-nowrap">3,750€</td>
+									<td class="px-4 py-4 whitespace-nowrap">750</td>
+									<td class="px-4 py-4 whitespace-nowrap">132%</td>
+								</tr>
+								<tr class="bg-emerald-50/60">
+									<th scope="row" class="px-4 py-4 font-semibold whitespace-nowrap text-slate-900">Producto B</th>
+									<td class="px-4 py-4 whitespace-nowrap">120€</td>
+									<td class="px-4 py-4 whitespace-nowrap">8,640€</td>
+									<td class="px-4 py-4 whitespace-nowrap">960</td>
+									<td class="px-4 py-4 whitespace-nowrap text-emerald-700">248%</td>
+								</tr>
+								<tr>
+									<th scope="row" class="px-4 py-4 font-semibold whitespace-nowrap text-slate-900">Producto C</th>
+									<td class="px-4 py-4 whitespace-nowrap">80€</td>
+									<td class="px-4 py-4 whitespace-nowrap">4,920€</td>
+									<td class="px-4 py-4 whitespace-nowrap">615</td>
+									<td class="px-4 py-4 whitespace-nowrap">176%</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</article>
+
+				<article class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm shadow-slate-200/60 xl:col-span-5">
+					<div class="flex flex-col gap-2 sm:flex-row sm:items-start sm:justify-between">
+						<div>
+							<p class="text-sm font-medium text-slate-500">Tabla de plataformas</p>
+							<h3 class="mt-1 text-2xl font-semibold tracking-tight text-slate-950">Rendimiento por red social</h3>
+						</div>
+						<span class="rounded-full bg-sky-100 px-3 py-1 text-xs font-semibold text-sky-700">Detalles interno</span>
+					</div>
+
+					<div class="mt-6 overflow-x-auto rounded-2xl border border-slate-200">
+						<table class="min-w-[40rem] divide-y divide-slate-200 text-left text-sm">
+							<thead class="bg-slate-50 text-slate-600">
+								<tr>
+									<th scope="col" class="px-4 py-3 font-semibold whitespace-nowrap">Plataforma</th>
+									<th scope="col" class="px-4 py-3 font-semibold whitespace-nowrap">Alcance</th>
+									<th scope="col" class="px-4 py-3 font-semibold whitespace-nowrap">Interacciones</th>
+									<th scope="col" class="px-4 py-3 font-semibold whitespace-nowrap">Mejor métrica</th>
+								</tr>
+							</thead>
+							<tbody class="divide-y divide-slate-200 bg-white text-slate-700">
+								<tr>
+									<th scope="row" class="px-4 py-4 font-semibold whitespace-nowrap text-slate-900">Instagram</th>
+									<td class="px-4 py-4 whitespace-nowrap">82,000</td>
+									<td class="px-4 py-4 whitespace-nowrap">13,900</td>
+									<td class="px-4 py-4 whitespace-nowrap">CTR 4.8%</td>
+								</tr>
+								<tr>
+									<th scope="row" class="px-4 py-4 font-semibold whitespace-nowrap text-slate-900">TikTok</th>
+									<td class="px-4 py-4 whitespace-nowrap">131,000</td>
+									<td class="px-4 py-4 whitespace-nowrap">22,400</td>
+									<td class="px-4 py-4 whitespace-nowrap">Conversión 6.2%</td>
+								</tr>
+								<tr>
+									<th scope="row" class="px-4 py-4 font-semibold whitespace-nowrap text-slate-900">YouTube</th>
+									<td class="px-4 py-4 whitespace-nowrap">64,000</td>
+									<td class="px-4 py-4 whitespace-nowrap">9,850</td>
+									<td class="px-4 py-4 whitespace-nowrap">Tiempo medio 5m 12s</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</article>
+
+				<article class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm shadow-slate-200/60 xl:col-span-12">
+					<div class="flex flex-col gap-2 sm:flex-row sm:items-start sm:justify-between">
+						<div>
+							<p class="text-sm font-medium text-slate-500">Alertas operacionales</p>
+							<h3 class="mt-1 text-2xl font-semibold tracking-tight text-slate-950">Notificaciones de rendimiento</h3>
+						</div>
+						<span class="rounded-full bg-amber-100 px-3 py-1 text-xs font-semibold text-amber-700">Seguimiento activo</span>
+					</div>
+
+					<section aria-label="Lista de alertas" class="mt-6 grid grid-cols-1 gap-4 lg:grid-cols-3">
+						<article class="rounded-2xl border border-rose-200 bg-rose-50 p-5">
+							<p class="text-sm font-semibold text-rose-700">Alerta crítica</p>
+							<h4 class="mt-2 text-lg font-semibold text-rose-950">Caída fuerte en conversión de YouTube</h4>
+							<p class="mt-2 text-sm text-rose-800">La conversión cayó 18% frente a la semana anterior. Revisar creatividades y segmentación del tráfico entrante.</p>
+						</article>
+
+						<article class="rounded-2xl border border-amber-200 bg-amber-50 p-5">
+							<p class="text-sm font-semibold text-amber-700">Atención</p>
+							<h4 class="mt-2 text-lg font-semibold text-amber-950">Producto A con ROI por debajo del objetivo</h4>
+							<p class="mt-2 text-sm text-amber-800">El ROI actual está 16 puntos por debajo de la meta trimestral. Conviene ajustar pricing o reducir el coste de adquisición.</p>
+						</article>
+
+						<article class="rounded-2xl border border-emerald-200 bg-emerald-50 p-5">
+							<p class="text-sm font-semibold text-emerald-700">Pico de rendimiento</p>
+							<h4 class="mt-2 text-lg font-semibold text-emerald-950">TikTok impulsa el mejor volumen cualificado</h4>
+							<p class="mt-2 text-sm text-emerald-800">La red aporta el mayor alcance y la mejor conversión del panel. Es el candidato principal para escalar inversión esta semana.</p>
+						</article>
+					</section>
+				</article>
+			</div>
+		</section>
+	</main>
+</body>
 </html>
